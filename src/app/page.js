@@ -38,7 +38,7 @@ export default function Home() {
           {
             shortUrl ?
               <div>
-                <p className="bg-green-300 rounded-lg p-5 mt-5 font-bold text-lg">Your short url is http://localhost:3001/{shortUrl}</p>
+                <p className="bg-green-300 rounded-lg p-5 mt-5 font-bold text-lg">Your short url is {process.env.NEXT_PUBLIC_BACKEND_URL}/{shortUrl}</p>
               </div>
               : ""
           }

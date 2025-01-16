@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 
-
 export default function Home() {
   async function create(e) {
     e.preventDefault()
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    const response = await fetch('http://localhost:3001/short_url', {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/short_url`, {
       method: 'POST',
       body: JSON.stringify({
         url: url
